@@ -66,3 +66,6 @@ $(function () {
 
   registerSetup(setup);
 });
+
+
+//Update platformer
