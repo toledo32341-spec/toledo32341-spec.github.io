@@ -80,17 +80,17 @@
         function update() {
           //moveBoxTo(boardWidth); // Moves box to right edge
           //positionX += 10; // Increases positionX by 10
-          
+
           positionX = positionX + speed;
           moveBoxTo(positionX);
-        
-        if (positionX > boardWidth) {
-          speed = speed * -1;
+
+          if (positionX > boardWidth) {
+            speed = speed * -1;
+          }
+          if (positionX < 0) {
+            speed *= -1;
+          }
         }
-        if  (positionX < 0) {
-          speed *= -1;
-        }
-      }
         /**
          * This Function will be called each time the box is clicked.
          * Each time it is called, it should perform each of the following actions:
@@ -103,8 +103,7 @@
           changeBoxText(points);
           points = points + 1; // Adds 1 to points
           speed = speed + 3; // Adds 3 to speed
-                
-         }
+        }
       })();
     </script>
   </body>
